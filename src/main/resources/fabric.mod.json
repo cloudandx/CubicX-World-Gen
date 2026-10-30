@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "cubicxworldgen",
+  "version": "${version}",
+  "name": "CubicX World Generation",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/cubicxworldgen/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.cloudandx.cubicxworldgen.client.CubicxworldgenClient"
+    ],
+    "main": [
+      "org.cloudandx.cubicxworldgen.Cubicxworldgen"
+    ]
+  },
+  "mixins": [
+    "cubicxworldgen.mixins.json",
+    {
+      "config": "cubicxworldgen.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
